@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Login</title><link rel="stylesheet" href="/static/css/style.css"></head>
+<body class="auth-page">
+<div class="auth-card">
+<h1>Chat App</h1><p>Sign in to continue</p>
+{% with messages = get_flashed_messages() %}{% for m in messages %}<div class="alert">{{m}}</div>{% endfor %}{% endwith %}
+<form method="post">
+<input name="email" type="email" placeholder="Email" required>
+<input name="password" type="password" placeholder="Password" required>
+<button>Login</button>
+</form>
+<p>New user? <a href="/register">Create account</a></p>
+</div>
+</body></html>
